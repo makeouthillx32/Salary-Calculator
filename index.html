@@ -1,0 +1,102 @@
+
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>Time Sheet Calculator</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>How much do you earn?</h1>
+    <table id="tableToModify">
+      <!-- headings -->
+      <tr>
+        <th>Day</th>
+        <th>Start Time (hour)</th>
+        <th>Start Time (minute)</th>
+        <th>AM/PM</th>
+        <th>End Time (hour)</th>
+        <th>End Time (minute)</th>
+        <th>AM/PM</th>
+        <th>Break Time (minute)</th>
+        <th>Total (hour)</th>
+      </tr>
+      <!-- row 1 -->
+      <tr id="rowToClone">
+        <td>1</td>
+        <td>
+          <select class="starthour">
+            <option value=6>3</option>
+						<option value=6>4</option>
+						<option value=6>5</option>
+						<option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+            <option value=11>11</option>
+            <option value=12>12</option>
+          </select>
+        </td>
+        <td>
+          <select class="startminute">
+            <option value=0>00</option>
+            <option value=15>15</option>
+            <option value=30>30</option>
+            <option value=45>45</option>
+          </select>
+        </td>
+        <td>
+          <select class="startampm">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </td>
+        <td>
+          <select class="endhour">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+            <option value=11>11</option>
+            <option value=12>12</option>
+          </select>
+        </td>
+        <td>
+          <select class="endminute">
+            <option value=0>00</option>
+            <option value=15>15</option>
+            <option value=30>30</option>
+            <option value=45>45</option>
+          </select>
+        </td>
+        <td>
+          <select class="endampm">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </td>
+        <td>
+          <select class="breaktime">
+            <option value=0>00</option>
+            <option value=15>15</option>
+            <option value=30>30</option>
+            <option value=45>45</option>
+            <option value=60>60</option>
+          </select>
+        </td>
+        <td class="total"></td>
+      </tr>
+    </table>
+    <button>+</button>
+    <p>Total hour(s): <span class="totalSum"></span></p>
+    <script src="clonerow.js"></script>
+  </body>
+</html>
